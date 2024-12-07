@@ -18,8 +18,7 @@ Redmine::Plugin.register :redmine_monitoring_controlling do
       permission :view_mc_time_mgmt_project, {:mc_time_mgmt_project => [:index]}
       permission :view_mc_human_resource_mgmt_project, {:mc_human_resource_mgmt_project => [:index]}
   end
-
-  menu :project_menu, :redmine_monitoring_controlling, { :controller => 'home_monitoring_controlling_project', :action => 'index' }, :caption => :monitoring_controlling_title
+  menu :project_menu, :redmine_monitoring_controlling, { :controller => 'home_monitoring_controlling_project', :action => 'index' }, :caption => :monitoring_controlling_title, before: :settings
 
 end
 
